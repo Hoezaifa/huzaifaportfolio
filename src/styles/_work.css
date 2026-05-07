@@ -1,0 +1,256 @@
+/* ─── Logo folio ─────────────────────────────────────────────────── */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  border: 2.5px solid var(--rule);
+  box-shadow: 10px 10px 0 var(--orange);
+  padding: 28px;
+  background: var(--paper);
+}
+
+.logo-cell {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.logo-cell__hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* ─── Project rows (posters section) ─────────────────────────────── */
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+
+.project-row--feature {
+  grid-template-columns: minmax(0, 380px) 1fr;
+}
+
+.project-meta__field { margin-bottom: 14px; }
+.project-meta__key   { font-family: var(--font-sans); font-weight: 700; font-size: 14px; }
+.project-meta__val   { font-family: var(--font-sans); font-weight: 400; font-size: 14px; line-height: 1.5; }
+
+/* ─── Social clusters ────────────────────────────────────────────── */
+.social-cluster {
+  border: 2.5px solid var(--rule);
+  box-shadow: 10px 10px 0 var(--orange);
+  padding: 28px;
+  background: var(--paper);
+  margin-bottom: 28px;
+}
+
+.social-cluster__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.social-cluster__name {
+  margin: 0;
+  font-family: 'Fredoka', var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1;
+  color: #1a64c9;
+}
+
+.social-cluster__name--dark { color: var(--ink); }
+
+.social-cluster__year {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.social-cluster__desc {
+  flex-basis: 100%;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.social-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ─── Apparel ────────────────────────────────────────────────────── */
+.apparel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* ─── UI/UX blocks ───────────────────────────────────────────────── */
+.ui-block {
+  border: 2.5px solid var(--rule);
+  box-shadow: 10px 10px 0 var(--orange);
+  padding: 28px;
+  background: var(--paper);
+  margin-bottom: 32px;
+}
+
+.ui-block__header {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.ui-block__icon {
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ui-block__title {
+  margin: 0 0 6px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.ui-block__desc {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.phones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.phone-slot {
+  aspect-ratio: 9 / 18;
+  border: 2.5px solid var(--rule);
+  border-radius: 28px;
+  background:
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.06) 0 8px, transparent 8px 16px),
+    var(--paper-2);
+  box-shadow: 5px 5px 0 var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.laptops-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.laptop-slot {
+  aspect-ratio: 16 / 10;
+  border: 2.5px solid var(--rule);
+  background:
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.06) 0 8px, transparent 8px 16px),
+    #1a1a1f;
+  box-shadow: 6px 6px 0 var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Tablet (768px) ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .logo-grid { grid-template-columns: repeat(2, 1fr); padding: 18px; gap: 16px; }
+
+  .project-row,
+  .project-row--feature { grid-template-columns: 1fr; }
+
+  .social-grid { grid-template-columns: 1fr; }
+
+  .poster-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .apparel-grid { grid-template-columns: 1fr 1fr; }
+
+  .phones-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .laptops-grid { grid-template-columns: 1fr; }
+
+  .ui-block { padding: 20px; }
+
+  .social-cluster { padding: 20px; }
+}
+
+/* ── Mobile (600px) ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ui-block__header { grid-template-columns: 1fr; }
+
+  .ui-block__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .apparel-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Small mobile (480px) ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .poster-grid { grid-template-columns: 1fr; }
+
+  .apparel-grid { grid-template-columns: 1fr; }
+
+  .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 14px; }
+}

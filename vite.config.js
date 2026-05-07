@@ -15,6 +15,7 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    allowedHosts: true,
     watch: process.env.VITE_WATCH_POLLING ? { usePolling: true, interval: 300 } : undefined,
   },
   preview: { port: 3000 },

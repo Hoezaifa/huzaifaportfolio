@@ -1,0 +1,90 @@
+/* ─── Marquee ribbon ─────────────────────────────────────────────── */
+/*
+ * Ribbons rotate around their center. The wider the viewport, the more
+ * their corners swing vertically. Zone height and ribbon top positions
+ * use clamp() so the corners never hit the overflow:hidden boundary.
+ *
+ * Geometry (ribbon centered at 50vw, angle θ):
+ *   corner vertical displacement = 50vw × sin(θ)
+ *   → 1440px: ~38px  |  1920px: ~50px  |  2560px: ~67px
+ *   → 375px (mobile, 3°): ~10px — fits inside the 140px zone floor
+ */
+.ribbon-zone {
+  position: relative;
+  height: clamp(160px, 16vw, 280px);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.ribbon {
+  position: absolute;
+  left: -20vw;
+  width: 140vw;
+  height: 52px;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: var(--orange);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  background: var(--ink);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ribbon__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.ribbon__track span {
+  display: inline-block;
+  padding-right: 60px;
+  flex-shrink: 0;
+}
+
+/*
+ * Top values scale with viewport so the corner displacement (4vw ≈ sin(3°)×50vw)
+ * stays inside the zone at every width, with no overlap between the two bands.
+ */
+.ribbon--dark {
+  top: clamp(22px, 4vw, 74px);
+  transform: rotate(-3deg);
+}
+
+.ribbon--light {
+  top: clamp(80px, calc(4vw + 58px), 150px);
+  transform: rotate(2deg);
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.ribbon--light .ribbon__track {
+  animation-direction: reverse;
+  animation-duration: 46s;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbon__track { animation: none; }
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────── */
+/*
+ * Smaller ribbon height at 600px. Zone floor reduced to 140px:
+ * worst-case (375px, light ribbon): 80 + 44 + 6.5px corner = 130.5px < 140px ✓
+ * Positional top formulas are identical — smaller height means they fit tighter.
+ */
+@media (max-width: 600px) {
+  .ribbon-zone { height: clamp(140px, 16vw, 280px); }
+  .ribbon { height: 44px; font-size: 16px; }
+}
