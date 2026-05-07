@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 html,
@@ -476,10 +477,16 @@ body::before {
 
 .about__col h3 { margin: 0 0 18px; }
 
-.info-item { margin-bottom: 18px; }
+.info-item {
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border: var(--border-sm);
+  background: var(--paper-2);
+  box-shadow: var(--shadow-sm);
+}
 .info-item__title { font-family: var(--font-sans); font-weight: 700; font-size: 16px; }
-.info-item__sub   { font-family: var(--font-sans); font-weight: 400; font-size: 14px; color: var(--muted); }
-.info-item__year  { font-family: var(--font-sans); font-weight: 600; font-size: 13px; margin-top: 2px; }
+.info-item__sub   { font-family: var(--font-sans); font-weight: 400; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.info-item__year  { font-family: var(--font-sans); font-weight: 600; font-size: 13px; margin-top: 4px; }
 
 .skills-grid {
   display: grid;
