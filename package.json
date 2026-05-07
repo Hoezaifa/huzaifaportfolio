@@ -1,0 +1,17 @@
+{
+  "name": "huzaifa-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Portfolio site for Huzaifa Riaz — Graphic & UI/UX Designer",
+  "scripts": {
+    "dev":     "vite",
+    "build":   "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
