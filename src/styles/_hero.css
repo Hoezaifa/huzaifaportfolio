@@ -164,8 +164,12 @@
   }
 
   .hero__eyebrow {
+    position: static;
+    display: inline-block;
+    transform: rotate(-2deg);
     font-size: 11px;
     padding: 5px 12px 6px;
+    margin-bottom: 10px;
   }
 }
 
