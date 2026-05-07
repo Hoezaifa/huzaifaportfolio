@@ -88,4 +88,61 @@ huzaifa-portfolio/
 
 ## Adding images
 
-Image slots across the site currently show placeholder boxes. To swap in a real image, drop the file into the `public/` folder and update the corresponding `img-slot` in `index.html` with an `<img>` tag pointing to it.
+Every image placeholder across the site looks like this in `index.html`:
+
+```html
+<div class="img-slot img-slot--poster">[ Gangs of SMIU — film poster ]</div>
+```
+
+To replace one with a real image, follow these three steps:
+
+---
+
+**Step 1 — Drop the image into the `public/` folder**
+
+Put your image file (JPG, PNG, WebP, etc.) directly inside the `public/` folder at the root of the project. Keep the filename simple, no spaces — use hyphens instead.
+
+Example: `public/gangs-of-smiu-poster.jpg`
+
+---
+
+**Step 2 — Open `index.html` and find the matching placeholder**
+
+Use `Ctrl + F` (or `Cmd + F` on Mac) to search for the text inside the brackets, e.g. `Gangs of SMIU`. That will jump you straight to the right line.
+
+---
+
+**Step 3 — Replace the `<div>` with an `<img>` tag**
+
+Delete the entire `<div class="img-slot ...">...</div>` line and replace it with this:
+
+```html
+<img class="img-slot img-slot--poster" src="/gangs-of-smiu-poster.jpg" alt="Gangs of SMIU film poster" />
+```
+
+Keep the same `class` values that were on the `<div>` — they control the size and shape of the slot. Only swap the tag itself, the `src` path, and the `alt` description.
+
+---
+
+**The size classes explained**
+
+Each placeholder has one of these classes that controls its shape. Your image will fill that exact shape:
+
+| Class | Shape | Used for |
+|---|---|---|
+| `img-slot--poster` | Tall rectangle (3:4) | Posters |
+| `img-slot--banner` | Wide rectangle (16:9) | Thumbnails, banners |
+| `img-slot--square` | Square (1:1) | Social media tiles, apparel |
+| `img-slot` (no modifier) | Flexible height | Landing screens, feed mockups |
+
+---
+
+**After adding images, rebuild the site**
+
+If you're running normal mode, stop it and run:
+
+```
+docker compose up --build
+```
+
+If you're in dev mode with hot reload, the browser will update automatically the moment you save `index.html` — no rebuild needed.
