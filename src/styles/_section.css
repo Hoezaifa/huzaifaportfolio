@@ -5,12 +5,14 @@
   max-width: 1180px;
   margin: 80px auto 0;
   padding: 0 28px;
+  scroll-margin-top: 72px;
 }
 
 @media (max-width: 600px) {
   .section {
     margin: 48px auto 0;
     padding: 0 16px;
+    scroll-margin-top: 56px;
   }
 }
 
