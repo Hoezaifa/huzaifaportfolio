@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page Not Found | Huzaifa Riaz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Fredoka:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; overflow-x: hidden; }
+
+    body {
+      font-family: 'Jost', system-ui, sans-serif;
+      background: #f4f1ea;
+      color: #15130f;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* dot-grid texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 22px 22px;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      border-bottom: 1.5px solid #1a1814;
+      background: #f4f1ea;
+      position: relative;
+      z-index: 2;
+    }
+
+    .topbar__name {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .topbar__year {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 44px 48px 28px; /* extra right padding offsets the 15px shadow-xl bleed */
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: #fff6e1;
+      border: 3px solid #1a1814;
+      box-shadow: 12px 12px 0 #ff7a1a, 12px 12px 0 3px #1a1814;
+      padding: 56px 64px;
+      text-align: center;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    /* ── 404 layered wordmark ── */
+    .wordmark {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .wordmark__layer {
+      display: inline-block;
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(96px, 20vw, 180px);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    .wordmark__layer--back {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      color: #ff7a1a;
+      z-index: 1;
+      user-select: none;
+    }
+
+    .wordmark__layer--front {
+      position: relative;
+      color: #fff6e1;
+      -webkit-text-stroke: 3px #1a1814;
+      paint-order: stroke fill;
+      z-index: 2;
+    }
+
+    /* ── Text ── */
+    .heading {
+      font-family: 'Jost', system-ui, sans-serif;
+      font-weight: 800;
+      font-size: clamp(22px, 4vw, 32px);
+      letter-spacing: -0.02em;
+      margin: 16px 0 10px;
+    }
+
+    .subtext {
+      font-size: 16px;
+      color: #6b665c;
+      line-height: 1.5;
+      margin: 0 0 36px;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #15130f;
+      color: #f4f1ea;
+      font-family: 'Jost', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 22px;
+      text-decoration: none;
+      border: 2px solid #1a1814;
+      box-shadow: 5px 5px 0 #ff7a1a;
+      transition: box-shadow 0.15s, transform 0.15s;
+      white-space: nowrap;
+    }
+
+    .cta:hover {
+      box-shadow: 7px 7px 0 #ff7a1a;
+      transform: translate(-1px, -1px);
+    }
+
+    .cta__arrow { transition: transform 0.2s; }
+    .cta:hover .cta__arrow { transform: translateX(4px); }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .topbar { padding: 12px 16px; }
+      main { padding: 32px 28px 48px 16px; } /* extra right for shadow */
+      .card { padding: 36px 24px; }
+      .wordmark__layer--back { top: 6px; left: 8px; }
+      .wordmark__layer--front { -webkit-text-stroke: 2px #1a1814; }
+      .cta { justify-content: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="topbar__name">Huzaifa Riaz</span>
+    <span class="topbar__year">2026</span>
+  </header>
+
+  <main>
+    <div class="card">
+
+      <div class="wordmark" aria-hidden="true">
+        <span class="wordmark__layer wordmark__layer--back">404</span>
+        <span class="wordmark__layer wordmark__layer--front">404</span>
+      </div>
+      <span class="u-visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">404</span>
+
+      <h1 class="heading">Page Not Found</h1>
+      <p class="subtext">This page doesn't exist or was moved.<br/>Head back to the portfolio.</p>
+
+      <a class="cta" href="/">
+        Go Home
+        <span class="cta__arrow" aria-hidden="true">&#8594;</span>
+      </a>
+
+    </div>
+  </main>
+
+</body>
+</html>
