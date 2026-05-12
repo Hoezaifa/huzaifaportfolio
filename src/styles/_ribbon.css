@@ -38,7 +38,7 @@
 .ribbon__track {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 20s linear infinite;
   will-change: transform;
 }
 
@@ -65,8 +65,8 @@
 }
 
 .ribbon--light .ribbon__track {
-  animation-direction: reverse;
-  animation-duration: 46s;
+  animation-name: marquee-reverse;
+  animation-duration: 24s;
 }
 
 @keyframes marquee {
@@ -74,8 +74,9 @@
   to   { transform: translateX(-50%); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ribbon__track { animation: none; }
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 /* ── Mobile ───────────────────────────────────────────────────────── */

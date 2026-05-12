@@ -24,6 +24,18 @@
   font-weight: 700;
   font-size: 13px;
   line-height: 1.2;
+  overflow: hidden;
+}
+
+.logo-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-cell:has(img) {
+  padding: 10px;
 }
 
 .logo-cell__hint {
@@ -187,6 +199,18 @@
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--muted);
+  overflow: hidden;
+}
+
+.phone-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-slot:has(img) {
+  padding: 0;
 }
 
 .laptops-grid {
@@ -210,6 +234,18 @@
   font-family: var(--font-mono);
   font-size: 11px;
   color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+}
+
+.laptop-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.laptop-slot:has(img) {
+  padding: 0;
 }
 
 /* ── Tablet (768px) ───────────────────────────────────────────────── */

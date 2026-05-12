@@ -1,31 +1,33 @@
 /* ─── Design tokens ──────────────────────────────────────────────── */
 :root {
-  --ink:          #15130f;
-  --paper:        #f4f1ea;
-  --paper-2:      #ebe6db;
-  --rule:         #1a1814;
-  --orange:       #ff7a1a;
-  --orange-soft:  #ffd9b8;
-  --cream:        #fff6e1;
-  --muted:        #6b665c;
+  --ink: #15130f;
+  --paper: #f4f1ea;
+  --paper-2: #ebe6db;
+  --rule: #1a1814;
+  --orange: #ff7a1a;
+  --orange-soft: #ffd9b8;
+  --cream: #fff6e1;
+  --muted: #6b665c;
 
-  --font-sans:    'Jost', 'Futura', 'Avenir Next', 'Century Gothic', system-ui, sans-serif;
+  --font-sans: 'Poppins', system-ui, sans-serif;
   --font-display: 'Fredoka', 'Quicksand', var(--font-sans);
-  --font-mono:    ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --shadow-sm:  3px 3px 0 var(--orange);
-  --shadow-md:  5px 5px 0 var(--orange);
-  --shadow-lg:  8px 8px 0 var(--orange);
+  --shadow-sm: 3px 3px 0 var(--orange);
+  --shadow-md: 5px 5px 0 var(--orange);
+  --shadow-lg: 8px 8px 0 var(--orange);
   --shadow-xl: 12px 12px 0 var(--orange), 12px 12px 0 3px var(--rule);
 
-  --border:    2px solid var(--rule);
+  --border: 2px solid var(--rule);
   --border-sm: 1.5px solid var(--rule);
 }
 
 /* ─── Reset ──────────────────────────────────────────────────────── */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -34,7 +36,10 @@ html {
 }
 
 html,
-body { margin: 0; padding: 0; }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--font-sans);
@@ -59,8 +64,10 @@ body::before {
 /* ─── Utilities ──────────────────────────────────────────────────── */
 .u-visually-hidden {
   position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;

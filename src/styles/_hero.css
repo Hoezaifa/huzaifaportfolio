@@ -2,15 +2,17 @@
 .hero {
   position: relative;
   z-index: 3;
-  max-width: 1180px;
   margin: 56px auto 0;
-  padding: 0 28px;
+  padding: 0;
 }
 
 .hero__card {
+  width: 95vw;
+  max-width: none;
+  margin: 0 auto;
   background: var(--cream);
   border: 3px solid var(--rule);
-  padding: 60px 56px;
+  padding: 110px 56px;
   box-shadow: var(--shadow-xl);
   text-align: center;
 }
@@ -87,7 +89,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 40px;
+  width: 95vw;
+  margin: 40px auto 0;
   gap: 32px;
   flex-wrap: wrap;
   text-align: left;
@@ -102,7 +105,9 @@
   margin: 0;
 }
 
-.hero__role strong { font-weight: 700; }
+.hero__role strong {
+  font-weight: 700;
+}
 
 .hero__cta {
   display: inline-flex;
@@ -128,23 +133,35 @@
   transform: translate(-1px, -1px);
 }
 
-.hero__cta-arrow { transition: transform 0.2s; }
-.hero__cta:hover .hero__cta-arrow { transform: translateX(4px); }
+.hero__cta-arrow {
+  transition: transform 0.2s;
+}
+
+.hero__cta:hover .hero__cta-arrow {
+  transform: translateX(4px);
+}
 
 /* ── Tablet ───────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .hero { padding: 0 20px; }
-  .hero__card { padding: 44px 36px; }
+  .hero {
+    padding: 0;
+  }
+
+  .hero__card {
+    padding: 44px 36px;
+  }
 }
 
 /* ── Mobile ───────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .hero {
     margin-top: 24px;
-    padding: 0 28px 0 16px; /* extra right padding offsets the 15px shadow-xl bleed */
+    padding: 0;
   }
 
-  .hero__card { padding: 32px 22px; }
+  .hero__card {
+    padding: 32px 22px;
+  }
 
   .hero__meta {
     flex-direction: column;
@@ -175,7 +192,16 @@
 
 /* ── Small mobile ─────────────────────────────────────────────────── */
 @media (max-width: 400px) {
-  .hero__card { padding: 20px 14px; }
-  .hero__title-layer--back { top: 6px; left: 8px; }
-  .hero__title-layer--front { -webkit-text-stroke: 2px var(--rule); }
+  .hero__card {
+    padding: 20px 14px;
+  }
+
+  .hero__title-layer--back {
+    top: 6px;
+    left: 8px;
+  }
+
+  .hero__title-layer--front {
+    -webkit-text-stroke: 2px var(--rule);
+  }
 }
