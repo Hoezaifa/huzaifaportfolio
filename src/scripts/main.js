@@ -1,3 +1,6 @@
+import { inject } from '@vercel/analytics';
+inject();
+
 /** Mobile nav toggle */
 function initNav() {
   const toggle = document.querySelector('.topbar__toggle');

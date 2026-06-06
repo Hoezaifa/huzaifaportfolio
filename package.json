@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Portfolio site for Huzaifa Riaz — Graphic & UI/UX Designer",
   "scripts": {
-    "dev":     "vite",
-    "build":   "vite build",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -13,5 +13,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
