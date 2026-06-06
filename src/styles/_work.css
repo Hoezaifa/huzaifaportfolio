@@ -124,10 +124,24 @@
 }
 
 /* ─── Apparel ────────────────────────────────────────────────────── */
-.apparel-grid {
+.apparel-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.apparel-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
+}
+
+.apparel-row--wide {
+  grid-template-columns: 1fr;
+}
+
+.img-slot--landscape {
+  aspect-ratio: 16 / 9;
 }
 
 /* ─── UI/UX blocks ───────────────────────────────────────────────── */
@@ -161,6 +175,18 @@
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: 13px;
+  overflow: hidden;
+}
+
+.ui-block__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ui-block__icon:has(img) {
+  padding: 8px;
 }
 
 .ui-block__title {
@@ -279,14 +305,14 @@
     height: 80px;
   }
 
-  .apparel-grid { grid-template-columns: 1fr 1fr; }
+
 }
 
 /* ── Small mobile (480px) ─────────────────────────────────────────── */
 @media (max-width: 480px) {
   .poster-grid { grid-template-columns: 1fr; }
 
-  .apparel-grid { grid-template-columns: 1fr; }
+  .apparel-row { grid-template-columns: 1fr; }
 
   .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 14px; }
 }
