@@ -80,12 +80,15 @@
 }
 
 /* ── Mobile ───────────────────────────────────────────────────────── */
-/*
- * Smaller ribbon height at 600px. Zone floor reduced to 140px:
- * worst-case (375px, light ribbon): 80 + 44 + 6.5px corner = 130.5px < 140px ✓
- * Positional top formulas are identical — smaller height means they fit tighter.
- */
 @media (max-width: 600px) {
-  .ribbon-zone { height: clamp(140px, 16vw, 280px); }
-  .ribbon { height: 44px; font-size: 16px; }
+  .ribbon-zone {
+    height: clamp(120px, 14vw, 200px);
+    margin-top: 40px !important;
+  }
+  .ribbon {
+    height: 40px;
+    font-size: 14px;
+    left: -30vw;
+    width: 160vw;
+  }
 }

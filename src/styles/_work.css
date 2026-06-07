@@ -276,7 +276,7 @@
 
 /* ── Tablet (768px) ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .logo-grid { grid-template-columns: repeat(2, 1fr); padding: 18px; gap: 16px; }
+  .logo-grid { grid-template-columns: repeat(2, 1fr); padding: 18px; gap: 16px; box-shadow: 6px 6px 0 var(--orange); }
 
   .project-row,
   .project-row--feature { grid-template-columns: 1fr; }
@@ -291,21 +291,71 @@
 
   .laptops-grid { grid-template-columns: 1fr; }
 
-  .ui-block { padding: 20px; }
+  .ui-block { padding: 20px; box-shadow: 6px 6px 0 var(--orange); }
 
-  .social-cluster { padding: 20px; }
+  .social-cluster { padding: 20px; box-shadow: 6px 6px 0 var(--orange); }
 }
 
 /* ── Mobile (600px) ───────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .ui-block__header { grid-template-columns: 1fr; }
-
-  .ui-block__icon {
-    width: 80px;
-    height: 80px;
+  .logo-grid {
+    padding: 14px;
+    gap: 12px;
+    box-shadow: 5px 5px 0 var(--orange);
   }
 
+  .logo-cell {
+    box-shadow: 3px 3px 0 var(--orange);
+  }
 
+  .ui-block__header {
+    grid-template-columns: 70px 1fr;
+    gap: 14px;
+  }
+
+  .ui-block__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ui-block__title {
+    font-size: 18px;
+  }
+
+  .ui-block {
+    padding: 16px;
+    box-shadow: 5px 5px 0 var(--orange);
+  }
+
+  .social-cluster {
+    padding: 16px;
+    box-shadow: 5px 5px 0 var(--orange);
+    margin-bottom: 22px;
+  }
+
+  .social-cluster__name {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .project-meta__field {
+    margin-bottom: 10px;
+  }
+
+  .project-meta__key {
+    font-size: 13px;
+  }
+
+  .project-meta__val {
+    font-size: 13px;
+  }
+
+  .apparel-row {
+    gap: 14px;
+  }
+
+  .apparel-layout {
+    gap: 14px;
+  }
 }
 
 /* ── Small mobile (480px) ─────────────────────────────────────────── */
@@ -314,5 +364,5 @@
 
   .apparel-row { grid-template-columns: 1fr; }
 
-  .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 14px; }
+  .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 12px; }
 }

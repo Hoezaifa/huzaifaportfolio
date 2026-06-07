@@ -60,16 +60,23 @@
 /* ── Mobile ───────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .contact {
-    padding: 56px 16px 72px;
+    padding: 48px 16px 64px;
+  }
+
+  .contact__heading {
+    margin-bottom: 24px;
   }
 
   .contact__pill {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
   }
 
   .contact__item {
     justify-content: center;
+    word-break: break-all;
   }
 }
