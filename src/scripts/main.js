@@ -83,7 +83,8 @@ function initSmoothScroll() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        const topbarHeight = 60; // offset for fixed topbar
+        const topbar = document.querySelector('.topbar');
+        const topbarHeight = topbar ? topbar.offsetHeight + 12 : 72;
         const targetY = target.getBoundingClientRect().top + window.scrollY - topbarHeight;
         smoothScrollTo(targetY);
       }
