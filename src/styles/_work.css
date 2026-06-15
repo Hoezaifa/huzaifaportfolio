@@ -203,6 +203,35 @@
   color: var(--muted);
 }
 
+.ui-block__overlay-wrap {
+  position: relative;
+}
+
+.ui-block__overlay-header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--orange);
+  padding: 18px;
+  max-width: 460px;
+}
+
+.ui-block__overlay-header .ui-block__icon {
+  width: 120px;
+  height: 120px;
+}
+
+.ui-block__overlay-header .ui-block__title {
+  font-size: 20px;
+}
+
 .phones-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -327,6 +356,24 @@
     box-shadow: 5px 5px 0 var(--orange);
   }
 
+  .ui-block__overlay-header {
+    bottom: 12px;
+    left: 12px;
+    grid-template-columns: 60px 1fr;
+    gap: 10px;
+    padding: 12px;
+    max-width: 280px;
+  }
+
+  .ui-block__overlay-header .ui-block__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ui-block__overlay-header .ui-block__title {
+    font-size: 15px;
+  }
+
   .social-cluster {
     padding: 16px;
     box-shadow: 5px 5px 0 var(--orange);
@@ -355,6 +402,85 @@
 
   .apparel-layout {
     gap: 14px;
+  }
+}
+
+/* ─── Meezan hero split ──────────────────────────────────────────── */
+.meezan-hero {
+  position: relative;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meezan-hero__info {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--orange);
+  padding: 18px;
+  max-width: 460px;
+  z-index: 2;
+}
+
+.meezan-hero__info .ui-block__icon {
+  width: 120px;
+  height: 120px;
+}
+
+.meezan-hero__info .ui-block__title {
+  font-size: 20px;
+}
+
+.meezan-hero__phones {
+  width: 55%;
+  flex-shrink: 0;
+}
+
+.meezan-hero__phones img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .meezan-hero {
+    padding: 28px;
+  }
+  .meezan-hero__info {
+    max-width: 360px;
+  }
+  .meezan-hero__phones {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .meezan-hero {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .meezan-hero__info {
+    position: static;
+    max-width: 100%;
+    grid-template-columns: 70px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+  .meezan-hero__info .ui-block__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .meezan-hero__phones {
+    width: 100%;
   }
 }
 
