@@ -73,6 +73,12 @@
   border: 2.5px solid var(--rule);
   box-shadow: var(--shadow-lg);
   padding: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 0 var(--orange);
 }
 
 @media (max-width: 600px) {

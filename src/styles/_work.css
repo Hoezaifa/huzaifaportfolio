@@ -14,6 +14,7 @@
   background: #fff;
   border: var(--border);
   box-shadow: 4px 4px 0 var(--orange);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +26,11 @@
   font-size: 13px;
   line-height: 1.2;
   overflow: hidden;
+}
+
+.logo-cell:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 var(--orange);
 }
 
 .logo-cell img {
@@ -70,6 +76,12 @@
   padding: 28px;
   background: var(--paper);
   margin-bottom: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-cluster:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 0 var(--orange);
 }
 
 .social-cluster__head {
@@ -151,6 +163,12 @@
   padding: 28px;
   background: var(--paper);
   margin-bottom: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 0 var(--orange);
 }
 
 .ui-block__header {
