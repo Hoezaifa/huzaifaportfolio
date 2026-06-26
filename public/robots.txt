@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huzaifaportfolio.vercel.app/sitemap.xml

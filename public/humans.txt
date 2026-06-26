@@ -1,0 +1,13 @@
+/* TEAM */
+Designer: Huzaifa Riaz
+Role: Graphic & UI/UX Designer
+Location: Karachi, Pakistan
+Twitter: @HuzaifaRiaz
+Site: https://huzaifaportfolio.vercel.app
+
+/* SITE */
+Last update: 2026-06-26
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code, Cursor
+Components: HTML, CSS, JavaScript, Vite
