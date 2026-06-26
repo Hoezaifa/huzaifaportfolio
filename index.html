@@ -34,6 +34,18 @@
   <meta name="twitter:description" content="Portfolio of Huzaifa Riaz, a freelance Graphic and UI/UX Designer based in Karachi, Pakistan." />
   <meta name="twitter:image" content="https://www.huzaifariaz.dev/portfolio-cover.png" />
   
+
+  <!-- Preconnect & DNS-Prefetch -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.clarity.ms" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
+  <!-- hreflang tags -->
+  <link rel="alternate" hreflang="en-PK" href="https://www.huzaifariaz.dev/" />
+  <link rel="alternate" hreflang="en" href="https://www.huzaifariaz.dev/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.huzaifariaz.dev/" />
+
   <!-- Verification & PWA -->
   <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
   <meta name="theme-color" content="#121212" />
@@ -46,55 +58,102 @@
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://www.huzaifariaz.dev/#person",
-        "name": "Huzaifa Riaz",
-        "url": "https://www.huzaifariaz.dev/",
-        "jobTitle": "Graphic & UI/UX Designer",
-        "description": "A graphic & UI/UX designer based in Karachi, building things that look good and work well.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Karachi",
-          "addressCountry": "Pakistan"
+        {
+            "@type": "Person",
+            "@id": "https://www.huzaifariaz.dev/#person",
+            "name": "Huzaifa Riaz",
+            "url": "https://www.huzaifariaz.dev/",
+            "jobTitle": "Graphic & UI/UX Designer",
+            "description": "A graphic & UI/UX designer based in Karachi, building things that look good and work well.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Karachi",
+                "addressCountry": "Pakistan"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/huzaifariaz",
+                "https://www.behance.net/huzaifariaz",
+                "https://github.com/Hoezaifa"
+            ]
         },
-        "sameAs": [
-          "https://www.linkedin.com/in/huzaifariaz",
-          "https://www.behance.net/huzaifariaz",
-          "https://github.com/Hoezaifa"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://www.huzaifariaz.dev/#service",
-        "name": "Huzaifa Riaz Design Services",
-        "description": "Freelance Graphic and UI/UX Design services including branding, logo design, app design, and web design.",
-        "provider": {
-          "@id": "https://www.huzaifariaz.dev/#person"
+        {
+            "@type": "ProfessionalService",
+            "@id": "https://www.huzaifariaz.dev/#service",
+            "name": "Huzaifa Riaz Design Services",
+            "description": "Freelance Graphic and UI/UX Design services including branding, logo design, app design, and web design.",
+            "provider": {
+                "@id": "https://www.huzaifariaz.dev/#person"
+            },
+            "areaServed": [
+                "Karachi",
+                "Pakistan",
+                "Worldwide"
+            ]
         },
-        "areaServed": ["Karachi", "Pakistan", "Worldwide"]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.huzaifariaz.dev/#website",
-        "url": "https://www.huzaifariaz.dev/",
-        "name": "Huzaifa Riaz Portfolio",
-        "author": {
-          "@id": "https://www.huzaifariaz.dev/#person"
+        {
+            "@type": "WebSite",
+            "@id": "https://www.huzaifariaz.dev/#website",
+            "url": "https://www.huzaifariaz.dev/",
+            "name": "Huzaifa Riaz Portfolio",
+            "author": {
+                "@id": "https://www.huzaifariaz.dev/#person"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://www.huzaifariaz.dev/#portfolio",
+            "name": "Huzaifa Riaz Design Portfolio",
+            "description": "A collection of graphic design, UI/UX, and branding projects by Huzaifa Riaz.",
+            "creator": {
+                "@id": "https://www.huzaifariaz.dev/#person"
+            },
+            "url": "https://www.huzaifariaz.dev/"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://www.huzaifariaz.dev/#organization",
+            "name": "Huzaifa Riaz Design",
+            "url": "https://www.huzaifariaz.dev/",
+            "logo": "https://www.huzaifariaz.dev/portfolio-cover.png",
+            "sameAs": [
+                "https://www.linkedin.com/in/huzaifariaz",
+                "https://www.behance.net/huzaifariaz",
+                "https://github.com/Hoezaifa"
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.huzaifariaz.dev/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.huzaifariaz.dev/"
+                }
+            ]
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://www.huzaifariaz.dev/#primaryimage",
+            "url": "https://www.huzaifariaz.dev/portfolio-cover.png",
+            "width": "1200",
+            "height": "630"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.huzaifariaz.dev/#webpage",
+            "url": "https://www.huzaifariaz.dev/",
+            "name": "Huzaifa Riaz Portfolio",
+            "isPartOf": {
+                "@id": "https://www.huzaifariaz.dev/#website"
+            },
+            "about": {
+                "@id": "https://www.huzaifariaz.dev/#person"
+            }
         }
-      },
-      {
-        "@type": "CreativeWork",
-        "@id": "https://www.huzaifariaz.dev/#portfolio",
-        "name": "Huzaifa Riaz Design Portfolio",
-        "description": "A collection of graphic design, UI/UX, and branding projects by Huzaifa Riaz.",
-        "creator": {
-          "@id": "https://www.huzaifariaz.dev/#person"
-        },
-        "url": "https://www.huzaifariaz.dev/"
-      }
     ]
-  }
+}
   </script>
   <link rel="stylesheet" href="/src/styles/main.css" />
   <!-- Microsoft Clarity -->
