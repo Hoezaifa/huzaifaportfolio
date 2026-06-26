@@ -3,7 +3,7 @@ Designer: Huzaifa Riaz
 Role: Graphic & UI/UX Designer
 Location: Karachi, Pakistan
 Twitter: @HuzaifaRiaz
-Site: https://huzaifaportfolio.vercel.app
+Site: https://www.huzaifariaz.dev
 
 /* SITE */
 Last update: 2026-06-26
