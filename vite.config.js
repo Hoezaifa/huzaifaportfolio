@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 
 export default defineConfig({
@@ -12,7 +12,8 @@ export default defineConfig({
           const isRoot       = url === '/' || url === '';
           const isAsset      = url.includes('.');
           const isViteRoute  = url.startsWith('/@');
-          if (isRoot || isAsset || isViteRoute) return next();
+          const isCaseStudy  = url.startsWith('/case-study/');
+          if (isRoot || isAsset || isViteRoute || isCaseStudy) return next();
           const page = readFileSync(resolve('public/404.html'), 'utf-8');
           res.statusCode = 404;
           res.setHeader('Content-Type', 'text/html');
@@ -25,6 +26,11 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        'deez-prints': resolve(__dirname, 'case-study/deez-prints.html'),
+        'meezan-bank': resolve(__dirname, 'case-study/meezan-bank.html'),
+      },
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'scripts/[name]-[hash].js',
